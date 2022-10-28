@@ -1,43 +1,47 @@
 import logo from '../../images/logo.png'
 import buyCar from '../../images/buy.png'
 import iconSearch from '../../images/search.png'
-
+import './header.css'
 const Header = () => {
-    return(
+    return (
         <header>
             <div>
-                <div>
-                    <img src={logo}/>
-                    <h1>Drip Store</h1>
+                <div class="name_logo">
+                    <div class="header_logo">
+                        <img src={logo} />
+                    </div>
+                    <h1><b>D</b>rip Store</h1>
                 </div>
-
-                <div>
-                    <input type="search" placeholder="Pesquisar produto" />
-                    
-                    <button>
-                        <img src={iconSearch}/>
-                    </button>
-                </div>
-                
-                <div>
-                    <a href="#">Cadastre-se</a>
-                    <a href="#">Entrar</a>
-                </div>
-
-                <button>
-                    <img src={buyCar} />
-                </button>
 
             </div>
 
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Produtos</a>
-                <a href="#">Categorias</a>
-                <a href="#">Meus Pedidos</a>
+                <div class="search_box">
+                    <input type="search" placeholder="Pesquisar produto" />
+
+                    <button>
+                        <img src={iconSearch} />
+                    </button>
+
+                    <button>
+                        <img src={buyCar} />
+                    </button>
+                </div>
+
             </nav>
 
-        </header>
+            <nav>
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Meus Pedidos</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ol>
+            </nav>
+
+        </header >
     )
 }
 
